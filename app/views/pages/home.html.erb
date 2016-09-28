@@ -1,2 +1,54 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="hero">
+	<div class="container">
+		
+		<div class="row">
+			<div class="hero-heading">
+				<h1> What do you need done? <br>
+				Find it on Sixerr. </h1>
+				<p>Browse. Buy. Done. </p>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-6 col-md-offset-3">
+				<form action="">
+					<div class="input-group input-group-lg">
+						<input type="text" class="form-control" placeholder="What are you looking for...">
+						<span class="input-group-btn">
+							<button class="btn btn-success" type="button">Find Services</button>
+						</span>
+					</div>
+				</form>
+			</div>
+		</div>
+
+	</div>
+</div>
+
+<div class="container">
+	<div class="row">
+		<h2 class="text-center">New Gigs</h2>
+		
+		<% @gigs.each_slice(4) do |gigs| %>
+			
+			<div class="row">
+				<% gigs.each do |gig| %>
+					<div class="col-md-3">
+						<div class="panel panel-default">
+							<div class="panel-heading">
+								<div class="gig-image"></div>		
+							</div>
+							<div class="panel-body">
+								<%= gig.title %>
+							</div>
+							<div class="panel-footer">
+								<span class="gig-price"> <%= gig.price %> </span>
+							</div>
+						</div>
+					</div>
+				<% end %>
+			</div>
+
+		<% end %>
+	</div>	
+</div>
