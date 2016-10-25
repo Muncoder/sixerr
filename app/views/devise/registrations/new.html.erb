@@ -26,4 +26,8 @@
   </div>
 <% end %>
 
+<hr>
+
+<%= link_to "Sign up with Facebook", user_facebook_omniauth_authorize_path(:facebook), class: "btn blue darken-1" %>
+
 <%= render "devise/shared/links" %>
