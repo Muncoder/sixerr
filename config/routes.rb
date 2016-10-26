@@ -10,4 +10,14 @@ Rails.application.routes.draw do
 
   resources :services
 
+  resources :services do
+  	resources :orders, only: [:create]
+  end
+
+  resources :orders, only: [:show, :destroy]
+
+  get '/user_orders' => 'orders#user_orders'
+  get '/user_sales' => 'orders#user_sales'
+  get '/my_services' => 'services#my_services'
+  
 end
