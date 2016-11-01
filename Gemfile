@@ -31,6 +31,9 @@ gem 'omniauth-facebook', '3.0.0'
 
 gem 'paperclip', '~> 5.1'
 
+gem 'stripe'
+gem 'figaro'
+
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
